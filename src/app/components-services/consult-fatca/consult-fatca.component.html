@@ -1,0 +1,87 @@
+<form [formGroup]="fgConsultFatca">
+    <div class="user-details">
+        <div class="subtitle">
+            <h2>CONSULTA FATCA</h2>
+        </div>
+        <div class="input-box">
+            <span class="details">Id Fatca: </span>
+            <input type="text" maxlength="16" formControlName="idFatca">
+        </div>
+        <div class="gender-details">
+            <span class="gender-title">Obligaciones Fiscales: </span>
+            <!-- <fieldset> -->
+            <div class="category">
+                <label for="Id_oblifisS">Si</label>
+                <input id="Id_oblifisS" type="radio" maxlength="1" value="S" formControlName="oblifis">
+                <label for="Id_oblifisN">No</label>
+                <input id="Id_oblifisN" type="radio" maxlength="1" value="N" formControlName="oblifis">
+            </div>
+            <!-- </fieldset> -->
+        </div>
+        <div class="input-box">
+            <span class="details">Cantidad Obligaciones: </span>
+            <input type="text" maxlength="20" formControlName="cantobl">
+        </div>
+        <div class="input-box">
+            <span class="details">Descripción CRS: </span>
+            <input type="text" maxlength="20" formControlName="descriptionCRS">
+        </div>
+        <div class="subtitle">
+            <h3>Indicadores</h3>
+        </div>
+        <div class="economic-details">
+            <div class="input-box">
+                <span>Id Indicador</span>
+                <input type="text" maxlength="21" formControlName="indicatorIdI">
+                <input type="text" maxlength="21" formControlName="indicatorIdI2">
+                <input type="text" maxlength="21" formControlName="indicatorIdI3">
+                <input type="text" maxlength="21" formControlName="indicatorIdI4">
+            </div>
+            <div class="input-box">
+                <span>Nombre</span>
+                <input type="text" maxlength="3" formControlName="nameI">
+                <input type="text" maxlength="3" formControlName="nameI2">
+                <input type="text" maxlength="3" formControlName="nameI3">
+                <input type="text" maxlength="3" formControlName="nameI4">
+            </div>
+            <div class="input-box">
+                <span>Valor</span>
+                <input type="text" maxlength="3" formControlName="valueI">
+                <input type="text" maxlength="3" formControlName="valueI2">
+                <input type="text" maxlength="3" formControlName="valueI3">
+                <input type="text" maxlength="3" formControlName="valueI4">
+            </div>
+        </div>
+        <div class="subtitle">
+            <h3>Obligaciones</h3>
+        </div>
+        <div class="economic-details">
+            <div class="input-box">
+                <span>Código Obligación</span>
+                <input type="text" maxlength="21" formControlName="countryCode1">
+                <input type="text" maxlength="21" formControlName="countryCode2">
+                <input type="text" maxlength="21" formControlName="countryCode3">
+                <input type="text" maxlength="21" formControlName="countryCode4">
+            </div>
+            <div class="input-box">
+                <span>Id Obligación</span>
+                <input type="text" maxlength="3" formControlName="idObligation1">
+                <input type="text" maxlength="3" formControlName="idObligation2">
+                <input type="text" maxlength="3" formControlName="idObligation3">
+                <input type="text" maxlength="3" formControlName="idObligation4">
+            </div>
+        </div>
+        <div class="data-date">
+            <div class="input-box">
+                <span class="details">Fecha Creación: </span>
+                <!-- <p class="spanData">ffgfgfgfg</p> -->
+                <input type="text" formControlName="dateValueC">
+            </div>
+            <div class="input-box">
+                <span class="details">Fecha Modificación: </span>
+                <!-- <p class="spanData">{{fecha}}</p> -->
+                <input type="text" formControlName="dateValueM">
+            </div>
+        </div>
+    </div>
+</form>

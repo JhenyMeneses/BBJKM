@@ -1,0 +1,78 @@
+<div class="toolbar" role="banner"><span class="toolbar-title">Vinculación</span></div>
+
+<body>
+  <div class="container-dashboard">
+    <form action="" [formGroup]="FgPrimary">
+      <div class="dash-details">
+        <div class="input-box">
+          <span class="details">Tipo Identificación</span>
+          <input type="text" placeholder="Tipo Identificación" formControlName="documentType">
+        </div>
+        <div class="input-box">
+          <span class="details">Número Identificación/Id Cliente Altamira</span>
+          <input type="number" minlength="8" #documentNumber placeholder="Número Identificación" formControlName="documentNumber">
+          <div class="error" *ngIf="this.FgPrimary.get('documentNumber')?.errors?.['required']">Campo Obligatorio</div>
+        </div>
+        <button class="btn-verification" (click)="getCustomersById(documentNumber.value)" >Verificar</button>
+      </div>
+      
+    </form>
+    <div class="con-btns-dash">
+      <button class="btn-primary" *ngIf="btn_create == true" (click)="openCreate()">Crear</button>
+      <button class="btn-primary" *ngIf="btn_consult == true" (click)="openConsult()">Consulta</button>
+      <button class="btn-primary" *ngIf="btn_consult == true" (click)="openModify()">Modificar</button>
+    </div>
+    <div *ngIf="switchCreate == true">
+      <app-create-client></app-create-client>
+    </div>
+    <div *ngIf="switchConsult == true">
+      <app-consult-client [IDClient]="ID_Client" [IDNumDoc]="ID_DocNum"></app-consult-client>
+    </div>
+    <div *ngIf="switchModify == true">
+      <app-mod-client [IDClient]="ID_Client" [DocNum]="ID_DocNum"></app-mod-client>
+    </div>
+
+  </div>
+
+  <div class="table-responsive-sm">
+    <table class="table table-hover tableFiles">
+  
+      <tr>
+        <th style="text-align: center !important">Id</th>
+        <th style="text-align: center !important; width: 150px !important">
+          Tipo Identificación
+        </th>
+        <th style="text-align: center !important">Identificación</th>
+        <th style="text-align: center !important">Nombres</th>
+        <th style="text-align: center !important">Apellidos</th>
+        <th style="text-align: center !important">Estado</th>
+        <th style="text-align: center !important; width: 50px !important">
+          Acción
+        </th>
+        <th style="text-align: center !important"></th>
+      </tr>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <input class="btn-lupa" type="image" src="https://cdn-icons-png.flaticon.com/128/3721/3721591.png"/>
+            <input class="btn-lupa" type="image" src="https://cdn-icons-png.flaticon.com/512/1828/1828270.png"/>
+          </td>
+          <td>
+            <input id="chek1" type="checkbox"/></td>
+        </tr>
+        <tr>
+          <th colspan="8" style="text-align: center !important">
+            <button><span>Migrar</span></button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</body>

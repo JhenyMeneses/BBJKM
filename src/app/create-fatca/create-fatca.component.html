@@ -1,0 +1,175 @@
+<div id="global" class="modal">
+    <div class="container-padding-modal">
+        <body>
+            <form action="#" [formGroup]="newFatca" (ngSubmit)="createFatca()">
+                <div class="button-close">
+                    <button type="button" (click)="closeFatca()"><img src="https://cdn-icons-png.flaticon.com/512/9134/9134450.png"> </button>
+                </div>
+                <div class="user-details">
+                    <div class="subtitle">
+                        <h2>CREACIÓN FATCA</h2>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Id Fatca: </span>
+                        <input type="text" maxlength="16" formControlName="idFatca">
+                        <div class="error" *ngIf="submitted && this.newFatca.get('documentTypeDT')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="gender-details">
+                        <span class="gender-title">Obligaciones Fiscales: </span>
+                            <div class="category">
+                                <label for="Id_oblifisS">Si</label>
+                                <input id="Id_oblifisS" (click)="campos(oblifisS.value)" type="radio" maxlength="1" value="S" #oblifisS formControlName="oblifis">
+                                <label for="Id_oblifisN">No</label>
+                                <input id="Id_oblifisN" (click)="campos(oblifisN.value)" type="radio" maxlength="1" value="N" #oblifisN formControlName="oblifis">
+                            </div>      
+                        <div class="error" *ngIf="submitted && this.newFatca.get('oblifis')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>  
+                    <div class="input-box" *ngIf="Obli == 'S'">
+                        <span class="details">Cantidad Obligaciones: </span>
+                        <input type="text" maxlength="20" #cantobli formControlName="cantobl" (ngModelChange)="userNamengmodelchange($event)">
+                        <div class="error" *ngIf="submitted && this.newFatca.get('cantobl')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Descripción CRS: </span>
+                        <input type="text" maxlength="20" formControlName="descriptionCRS">
+                        <div class="error" *ngIf="submitted && this.newFatca.get('descriptionCRS')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Estado: </span>
+                        <input type="text" maxlength="20" formControlName="estadoFatca">
+                        <div class="error" *ngIf="submitted && this.newFatca.get('estadoFatca')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="subtitle">
+                        <h3>Indicadores</h3>
+                    </div>  
+                    <div class="economic-details">
+                        <div class="input-box">
+                            <span>Id Indicador</span>
+                           <input type="text" maxlength="21" formControlName="indicatorIdI0">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('indicatorIdI0')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="indicatorIdI1">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('indicatorIdI1')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="indicatorIdI2">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('indicatorIdI2')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="indicatorIdI3">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('indicatorIdI3')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                        <div class="input-box">
+                            <span>Nombre</span>
+                            <input type="text" maxlength="3" formControlName="nameI">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('nameI')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="3" formControlName="nameI2">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('nameI2')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="3" formControlName="nameI3">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('nameI3')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="3" formControlName="nameI4">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('nameI4')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                        <div class="input-box">
+                            <span>Valor</span>
+                            <input type="text" maxlength="1" formControlName="valueI">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('valueI')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="1" formControlName="valueI2">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('valueI2')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="1" formControlName="valueI3">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('valueI3')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="1" formControlName="valueI4">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('valueI4')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                    </div> 
+                    <div class="subtitle" *ngIf="Obli == 'S'">
+                        <h3>Obligaciones</h3>
+                    </div>  
+                    <div class="economic-details" *ngIf="Obli == 'S' && NumObli == 1">
+                        <div class="input-box">
+                            <span>Código Obligación</span>
+                            <input type="text" maxlength="21" formControlName="countryCode1">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('countryCode1')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                        <div class="input-box">
+                            <span>Id Obligación</span>
+                            <input type="text" maxlength="21" formControlName="idObligation1" >
+                            <div class="error" *ngIf="submitted && this.newFatca.get('idObligation1')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                    </div>  
+                    <div class="economic-details" *ngIf="Obli == 'S' && NumObli == 2">
+                        <div class="input-box">
+                            <span>Código Obligación</span>
+                            <input type="text" maxlength="21" formControlName="countryCode1">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('countryCode1')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="countryCode2">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('countryCode2')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                        <div class="input-box">
+                            <span>Id Obligación</span>
+                            <input type="text" maxlength="21" formControlName="idObligation1" >
+                            <div class="error" *ngIf="submitted && this.newFatca.get('idObligation1')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="idObligation2" >
+                            <div class="error" *ngIf="submitted && this.newFatca.get('idObligation2')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                    </div>  
+                    <div class="economic-details" *ngIf="Obli == 'S' && NumObli == 3">
+                        <div class="input-box">
+                            <span>Código Obligación</span>
+                            <input type="text" maxlength="21" formControlName="countryCode1">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('countryCode1')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="countryCode2">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('countryCode2')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="countryCode3">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('countryCode3')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                        <div class="input-box">
+                            <span>Id Obligación</span>
+                            <input type="text" maxlength="21" formControlName="idObligation1" >
+                            <div class="error" *ngIf="submitted && this.newFatca.get('idObligation1')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="idObligation2" >
+                            <div class="error" *ngIf="submitted && this.newFatca.get('idObligation2')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="idObligation3" >
+                            <div class="error" *ngIf="submitted && this.newFatca.get('idObligation3')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                    </div>
+                    <div class="economic-details" *ngIf="Obli == 'S' && NumObli == 4">
+                        <div class="input-box">
+                            <span>Código Obligación</span>
+                            <input type="text" maxlength="21" formControlName="countryCode1">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('countryCode1')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="countryCode2">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('countryCode2')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="countryCode3">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('countryCode3')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="countryCode4">
+                            <div class="error" *ngIf="submitted && this.newFatca.get('countryCode4')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                        <div class="input-box">
+                            <span>Id Obligación</span>
+                            <input type="text" maxlength="21" formControlName="idObligation1" >
+                            <div class="error" *ngIf="submitted && this.newFatca.get('idObligation1')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="idObligation2" >
+                            <div class="error" *ngIf="submitted && this.newFatca.get('idObligation2')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="idObligation3" >
+                            <div class="error" *ngIf="submitted && this.newFatca.get('idObligation3')?.errors?.['required']">Campo Obligatorio</div>
+                            <input type="text" maxlength="21" formControlName="idObligation4" >
+                            <div class="error" *ngIf="submitted && this.newFatca.get('idObligation4')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                    </div>
+                    <div class="data-date">
+                        <div class="input-box">
+                            <span class="details">Fecha Creación: </span>
+                            <p class="spanData">{{fecha}}</p>
+                            <!-- <input type="date" formControlName="dateValueC"> -->
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Fecha Modificación: </span>
+                            <p class="spanData">{{fecha}}</p>
+                            <!-- <input type="text" formControlName="dateValueM"> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Guardar">
+                </div>
+            </form>
+        </body>
+    </div>
+</div>
+

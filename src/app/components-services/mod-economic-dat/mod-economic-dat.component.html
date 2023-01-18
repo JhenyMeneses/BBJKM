@@ -1,0 +1,59 @@
+<div class="table-responsive-sm">
+    <table class="table table-hover tableModal">
+      <thead>
+        <tr>
+          <th style="text-align: center !important" colspan="4">Modificar Información Economica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Actividad Económica:</td>
+          <td colspan="2">{{ dataEconomicDat.economicActivity.id }}</td>
+        </tr>
+        <tr>
+          <th style="text-align: center !important" colspan="4">Ingresos</th>
+        </tr>
+        <tr>
+          <th style="text-align: center !important">Tipo Ingreso</th>
+          <th style="text-align: center !important">Moneda</th>
+          <th style="text-align: center !important">Monto</th>
+        </tr>
+        <tr>
+          <td>
+            <div *ngFor="let obj of dataEconomicDat.incomes">
+              <input type="text" [(ngModel)]="obj.incomesType.id" placeholder="Ingreso"/>
+            </div>
+          </td>
+          <td>
+            <div *ngFor="let obj2 of dataEconomicDat.incomes">
+                <input type="text" [(ngModel)]="obj2.incomesValue.currency" placeholder="Moneda"/>
+            </div>
+          </td>
+          <td align="right">
+            <div *ngFor="let obj3 of dataEconomicDat.incomes">
+                <input type="text" [(ngModel)]="obj3.incomesValue.amount" placeholder="Monto"/>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th style="text-align: center !important" colspan="4">
+            Espacio de Trabajo
+          </th>
+        </tr>
+        <tr>
+          <th style="text-align: center !important">Fecha Inicio</th>
+          <th style="text-align: center !important">Cargo</th>
+          <th style="text-align: center !important">Situación Laboral</th>
+        </tr>
+        <tr>
+          <td>{{ dataEconomicDat.workPlace.workStartDate }}</td>
+          <td>{{ dataEconomicDat.workPlace.profesionPosition.id }}</td>
+          <td colspan="2">{{ dataEconomicDat.employmentSituation }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <!--<a class="menu" routerLink="/listEconomic">Volver</a>-->
+      <a class="menu">Guardar</a>
+    </div>
+  </div>

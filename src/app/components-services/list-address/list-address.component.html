@@ -1,0 +1,43 @@
+<form [formGroup]="fgConsultAddress">
+  <div class="user-details">
+      <div class="subtitle">
+          <h2>INFORMACIÓN DIRECCIONES</h2>
+      </div>
+      <div class="input-box">
+          <span class="details">Tipo Propiedad: </span>
+          <input type="text" maxlength="40" formControlName="addressType">
+      </div>
+      <div class="input-box">
+          <span class="details">País: </span>
+          <input type="text" maxlength="79" formControlName="country">
+      </div>
+      <div class="input-box">
+        <span class="details">Departamento: </span>
+        <input type="text" maxlength="18" formControlName="state">
+      </div>
+      <div class="input-box">
+        <span class="details">Ciudad: </span>
+        <input type="text" maxlength="10" formControlName="city">
+      </div>
+      <div class="input-box">
+        <span class="details">Dirección: </span>
+        <input type="text" maxlength="17" formControlName="addressName">
+      </div>
+      <div class="input-box">
+        <span class="details">Código Postal: </span>
+        <input type="text" formControlName="zipCode">
+      </div>
+      <div class="input-box">
+        <span class="details">Estrato </span>
+        <input type="text" formControlName="stratum">
+      </div>
+      <div class="input-box">
+        <span class="details">Antiguedad: </span>
+        <input type="text" formControlName="antiquity">
+      </div>
+      <div class="input-box" *ngIf="infoAdicional != ''">
+        <span class="details">Información Adicional</span>
+        <input type="text" formControlName="additionalInformation">
+      </div>
+  </div>
+</form>

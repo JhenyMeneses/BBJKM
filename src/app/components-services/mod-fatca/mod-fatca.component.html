@@ -1,0 +1,94 @@
+<div *ngIf="dataModFatca">
+  <div class="table-responsive-sm">
+    <table class="table table-hover tableModal">
+      <tbody>
+        <tr>
+          <th style="text-align: center !important" colspan="4">Fatca</th>
+        </tr>
+        <tr>
+          <th>Obligaciones Fiscales</th>
+          <td>
+            <input
+              type="text"
+              [(ngModel)]="dataModFatca.oblifis"
+              placeholder="Obligaciones"
+            />
+          </td>
+          <th>Cantidad Obligaciones</th>
+          <td>
+            <input
+              type="text"
+              [(ngModel)]="dataModFatca.cantobl"
+              placeholder="Cantidad"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th>Descripción Fatca</th>
+          <td>
+            <input
+              type="text"
+              [(ngModel)]="dataModFatca.descriptionFatca"
+              placeholder="Descripción"
+            />
+          </td>
+          <th>Descripcion CRS</th>
+          <td>
+            <input
+              type="text"
+              [(ngModel)]="dataModFatca.descriptionCRS"
+              placeholder="Descripcion CRS"
+            />
+          </td>
+        </tr>
+        <tr>
+          <th>Indicadores</th>
+          <td colspan="3">
+            <div *ngFor="let obj of dataModFatca.indicators">
+              <input
+                type="text"
+                [(ngModel)]="obj.name"
+                placeholder="Indicadores"
+              />
+            </div>
+          </td>
+          <!--<td>{{ dataConsultClient.indicators[0].name }}</td>
+                  <td>{{ dataConsultClient.indicators[1].name }}</td>
+                  <td>{{ dataConsultClient.indicators[2].name }}</td>
+                  <td>{{ dataConsultClient.indicators[3].name }}</td>
+                  <td>{{ dataConsultClient.indicators[4].name }}</td>
+                  <td>{{ dataConsultClient.indicators[5].name }}</td>-->
+        </tr>
+        <tr>
+          <th>Obligaciones</th>
+          <td colspan="3">
+            <div *ngFor="let obj2 of dataModFatca.obligation">
+              <input
+                type="text"
+                [(ngModel)]="obj2.idObligation"
+                placeholder="Obligaciones"
+              />
+            </div>
+          </td>
+          <!--<th>{{ dataConsultClient.obligation[0].countryCode }}</th>
+                  <td>{{ dataConsultClient.obligation[0].idObligation }}</td>
+                  <th>{{ dataConsultClient.obligation[1].countryCode }}</th>
+                  <td>{{ dataConsultClient.obligation[1].idObligation }}</td>
+                  <th>{{ dataConsultClient.obligation[2].countryCode }}</th>
+                  <td>{{ dataConsultClient.obligation[2].idObligation }}</td>-->
+        </tr>
+        <tr>
+          <th>Fecha Creación</th>
+          <td>{{ dataModFatca.dateFatca[0].dateValue }}</td>
+          <th>Fecha Modificación</th>
+          <td>{{ dataModFatca.dateFatca[1].dateValue }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <!--<a class="menu" routerLink="/">Volver</a>-->
+    <a class="menu" (click)="onSaveComplete()">Guardar</a>
+  </div>
+</div>
+

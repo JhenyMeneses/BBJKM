@@ -1,0 +1,46 @@
+<div class="table-responsive-sm">
+    <table class="table table-hover tableModal">
+      <thead>
+        <tr>
+          <th style="text-align: center !important" colspan="9"> Modificar Dirección {{ dataModAddress.addressType.id }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <th style="text-align: center !important">Tipo Propiedad</th>
+            <th style="text-align: center !important">Ciudad</th>
+            <th style="text-align: center !important">Departamento</th>
+            <th style="text-align: center !important">País</th>
+            <th style="text-align: center !important">Estrato</th>
+            <th style="text-align: center !important">Codigo Postal</th>
+          </tr>
+        <tr>
+          <td><input type="text" [(ngModel)]="dataModAddress.ownershipType.id" placeholder="Tipo Vivienda"/></td>
+          <td><input type="text" [(ngModel)]="dataModAddress.location.city" placeholder="Ciudad"/></td>
+          <td><input type="text" [(ngModel)]="dataModAddress.location.state.id" placeholder="Departamento"/></td>   
+          <td><input type="text" [(ngModel)]="dataModAddress.location.country.id" placeholder="País"/></td>
+          <td><input type="text" [(ngModel)]="dataModAddress.location.meta.stratum" placeholder="Estrato"/></td>
+          <td><input type="text" [(ngModel)]="dataModAddress.location.zipCode" placeholder="Código Postal"/></td>     
+        </tr>
+        <tr>
+          <th style="text-align: center !important">Dirección</th>
+          <td colspan="2"><input type="text" [(ngModel)]="dataModAddress.location.addressName" placeholder="Dirección"/></td>
+          <th>Información Adicional</th>    
+          <td colspan="2"><input type="text" [(ngModel)]="dataModAddress.location.additionalInformation" placeholder="Información Adicional"/></td> 
+        </tr>
+        <tr>
+          <th>Grupos Geográficos</th>
+          <td colspan="8">
+            <div *ngFor="let obj1 of dataModAddress.location.geographicGroups">
+                <input type="text" [(ngModel)]="obj1.geographicGroupType.id" placeholder="Grupos"/>
+            </div>
+          </td>      
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <!--<a class="menu" routerLink="/">Volver</a>-->
+      <a class="menu" >Guardar</a>
+    </div>
+  </div>
+  

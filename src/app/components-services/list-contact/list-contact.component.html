@@ -1,0 +1,27 @@
+<form [formGroup]="fgConsultContact">
+  <div class="user-details">
+      <div class="subtitle">
+          <h2>INFORMACIÓN CONTACTOS</h2>
+      </div>
+      <div class="input-box">
+          <span class="details">Contacto: </span>
+          <input type="text" maxlength="80" formControlName="contact">
+      </div>
+      <div class="input-box">
+          <span class="details">Tipo Contacto: </span>
+          <input type="text" maxlength="20" formControlName="contactType">
+      </div>
+      <div class="input-box">
+        <span class="details">País: </span>
+        <input type="text" maxlength="20" formControlName="country">
+      </div>
+      <div class="input-box">
+        <span class="details">Preferencial: </span>
+        <input type="text" formControlName="isPreferential">
+      </div>
+      <div class="input-box">
+        <span class="details">Verificado: </span>
+        <input type="text" formControlName="isChecked">
+      </div>
+  </div>
+</form>

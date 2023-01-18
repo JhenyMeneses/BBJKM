@@ -1,0 +1,48 @@
+<form [formGroup]="fgConsultEconomic">
+  <div class="user-details">
+      <div class="subtitle">
+          <h2>INFORMACIÓN ECONÓMICA</h2>
+      </div>
+      <div class="input-box">
+          <span class="details">Actividad Económica: </span>
+          <input type="text" maxlength="40" formControlName="economicActivity">
+      </div>
+      <div class="input-box">
+          <span class="details">Tipo Ocupación: </span>
+          <input type="text" maxlength="79" formControlName="occupationType">
+      </div>
+      <div class="economic-details">
+          <div class="input-box">
+              <span>Tipo Ingreso</span>
+              <input type="text" maxlength="21" formControlName="incomesType">
+          </div>
+          <div class="input-box">
+              <span>Moneda</span>
+              <input type="text" maxlength="3" formControlName="currency">
+          </div>
+          <div class="input-box">
+              <span>Monto</span>
+              <input type="text" maxlength="21" formControlName="amount">
+          </div>
+      </div>
+      <div class="subtitle">
+          <h3>Información Laboral</h3>
+      </div>
+      <div class="input-box">
+        <span class="details">Puesto/Cargo: </span>
+        <input type="text" maxlength="18" formControlName="profesionPosition">
+      </div>
+      <div class="input-box">
+        <span class="details">Fecha Inicio </span>
+        <input type="text" maxlength="10" formControlName="workStartDate">
+      </div>
+      <div class="input-box">
+        <span class="details">Situación Laboral: </span>
+        <input type="text" maxlength="17" formControlName="employmentSituation">
+      </div>
+      <div class="input-box">
+        <span class="details">Actividad: </span>
+        <input type="text" formControlName="activity">
+      </div>
+  </div>
+</form>

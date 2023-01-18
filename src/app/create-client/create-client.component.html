@@ -1,0 +1,244 @@
+<div id="global" class="modal">
+    <div class="container-padding-modal">
+        <body>
+            <form action="#" [formGroup]="newClient" (ngSubmit)="createClient()">
+                <div class="button-close">
+                    <button type="button" (click)="closeCreate()"><img src="https://cdn-icons-png.flaticon.com/512/9134/9134450.png"> </button>
+                </div>
+                <div class="user-details">
+                    <div class="subtitle">
+                        <h2>DATOS BÁSICOS </h2><p>{{stateValid}}</p>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tipo Identificación: </span>
+                        <input type="text" maxlength="16" formControlName="documentTypeDT">
+                        <div class="error" *ngIf="summited && this.newClient.get('documentTypeDT')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Número Identificación: </span>
+                        <input type="text" maxlength="15" formControlName="documentNumberDT">
+                        <div class="error" *ngIf="summited && this.newClient.get('documentNumberDT')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nombres: </span>
+                        <input type="text" maxlength="20" formControlName="firstName" >
+                        <div class="error" *ngIf="summited && this.newClient.get('firstName')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Primer Apellido: </span>
+                        <input type="text" maxlength="20" formControlName="lastName">
+                        <div class="error" *ngIf="summited && this.newClient.get('lastName')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Segundo Apellido: </span>
+                        <input type="text" maxlength="20" formControlName="surnames">
+                        <div class="error" *ngIf="summited && this.newClient.get('surnames')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="gender-details">
+                        <span class="gender-title">Género: </span>
+                            <div class="category">
+                                <label for="Id_genderF">F</label>
+                                <input id="Id_genderF" type="radio" maxlength="1" value="F" formControlName="gender">
+                                <label for="Id_genderM">M</label>
+                                <input id="Id_genderM" type="radio" maxlength="1" value="M" formControlName="gender">
+                            </div>      
+                        <div class="error" *ngIf="summited && this.newClient.get('gender')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>   
+                    <div class="input-box">
+                        <span class="details">Fecha Nacimiento: </span>
+                        <input type="date" maxlength="10" formControlName="birthDate">
+                        <div class="error" *ngIf="summited && this.newClient.get('birthDate')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>         
+                    <div class="input-box">
+                        <span class="details">País Nacimiento: </span>
+                        <input type="text" maxlength="4" formControlName="countryBir">
+                        <div class="error" *ngIf="summited && this.newClient.get('countryBir')?.errors?.['required']">Campo Obligatorio</div>
+                    </div> 
+                    <div class="input-box">
+                        <span class="details">Departamento Nacimiento: </span>
+                        <input type="text" maxlength="4" formControlName="stateBir">
+                        <div class="error" *ngIf="summited && this.newClient.get('stateBir')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>     
+                    <div class="input-box">
+                        <span class="details">Ciudad Nacimiento: </span>
+                        <input type="text" maxlength="15" formControlName="cityBir">
+                        <div class="error" *ngIf="summited && this.newClient.get('cityBir')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>                                              
+                    <div class="input-box">
+                        <span class="details">Fecha Expiración: </span>
+                        <input type="date" maxlength="10" formControlName="expirationDate">
+                        <div class="error" *ngIf="summited && this.newClient.get('expirationDate')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>  
+                    <div class="input-box">
+                        <span class="details">País Expedición: </span>
+                        <input type="text" maxlength="3" formControlName="countryDT">
+                        <div class="error" *ngIf="summited && this.newClient.get('documentTypeDT')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>  
+                    <div class="input-box">
+                        <span class="details">Departamento Expedición: </span>
+                        <input type="text" maxlength="4" formControlName="stateDT">
+                        <div class="error" *ngIf="summited && this.newClient.get('stateDT')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>      
+                    <div class="input-box">
+                        <span class="details">Ciudad Expedición </span>
+                        <input type="text" maxlength="15" formControlName="cityDT">
+                        <div class="error" *ngIf="summited && this.newClient.get('cityDT')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>    
+                    <div class="input-box">
+                        <span class="details">Nacionalidad: </span>
+                        <input type="text" maxlength="4" formControlName="nationalities">
+                        <div class="error" *ngIf="summited && this.newClient.get('nationalities')?.errors?.['required']">Campo Obligatorio</div>
+                    </div> 
+                    <div class="input-box">
+                        <span class="details">Estado Civil: </span>
+                        <input type="text" maxlength="20" formControlName="maritalStatus">
+                        <div class="error" *ngIf="summited && this.newClient.get('maritalStatus')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>   
+                    <div class="input-box">
+                        <span class="details">Personas a Cargo: </span>
+                        <input type="text" maxlength="2" formControlName="personsInCharge">
+                        <div class="error" *ngIf="summited && this.newClient.get('personsInCharge')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>                               
+                    <div class="input-box">
+                        <span class="details">Banco: </span>
+                        <input type="text" maxlength="4" formControlName="bank">
+                        <div class="error" *ngIf="summited && this.newClient.get('bank')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Sucursal: </span>
+                        <input type="text" maxlength="4" formControlName="branch">
+                        <div class="error" *ngIf="summited && this.newClient.get('branch')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN DE RESIDENCIA</h2>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">País Residencia: </span>
+                        <input type="text" maxlength="3" formControlName="countryD">
+                        <div class="error" *ngIf="summited && this.newClient.get('countryD')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Departamento Residencia: </span>
+                        <input type="text" maxlength="4" formControlName="stateD">
+                        <div class="error" *ngIf="summited && this.newClient.get('stateD')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>  
+                    <div class="input-box">
+                        <span class="details">Ciudad Residencia: </span>
+                        <input type="text" maxlength="20" formControlName="cityD">
+                        <div class="error" *ngIf="summited && this.newClient.get('cityD')?.errors?.['required']">Campo Obligatorio</div>
+                    </div> 
+                    <div class="input-box">
+                        <span class="details">Dirección Residencia: </span>
+                        <input type="text" maxlength="50" formControlName="addressNameD">
+                        <div class="error" *ngIf="summited && this.newClient.get('addressNameD')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>  
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN ECONÓMICA</h2>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Actividad Económica: </span>
+                        <input type="text" maxlength="11" formControlName="economicActivity">
+                        <div class="error" *ngIf="summited && this.newClient.get('economicActivity')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tipo Ocupación: </span>
+                        <input type="text" maxlength="3" formControlName="occupationType">
+                        <div class="error" *ngIf="summited && this.newClient.get('occupationType')?.errors?.['required']">Campo Obligatorio</div>
+                    </div> 
+                    <div class="economic-details">
+                        <div class="input-box">
+                            <span>Tipo Ingreso</span>
+                            <input type="text" maxlength="21" formControlName="incomesType">
+                            <div class="error" *ngIf="summited && this.newClient.get('incomesType')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                        <div class="input-box">
+                            <span>Moneda</span>
+                            <input type="text" maxlength="3" formControlName="currency">
+                            <div class="error" *ngIf="summited && this.newClient.get('currency')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                        <div class="input-box">
+                            <span>Monto</span>
+                            <input type="text" maxlength="21" formControlName="amount">
+                            <div class="error" *ngIf="summited && this.newClient.get('amount')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>
+                    </div> 
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN LABORAL</h2>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nombre Empresa</span>
+                        <input type="text" maxlength="60" formControlName="nameWP">
+                        <div class="error" *ngIf="summited && this.newClient.get('nameWP')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>    
+                    <div class="input-box">
+                        <span class="details">Tipo Identificación Contribuyente</span>
+                        <input type="text" maxlength="4" formControlName="documentTypeWP">
+                        <div class="error" *ngIf="summited && this.newClient.get('documentTypeWP')?.errors?.['required']">Campo Obligatorio</div>
+                    </div> 
+                    <div class="input-box">
+                        <span class="details">Número Identificación Contribuyente</span>
+                        <input type="text" maxlength="15" formControlName="documentNumberWP">
+                        <div class="error" *ngIf="summited && this.newClient.get('documentNumberWP')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>    
+                    <div class="input-box">
+                        <span class="details">Fecha Ingreso</span>
+                        <input type="date" maxlength="10" formControlName="workStartDateWP">
+                        <div class="error" *ngIf="summited && this.newClient.get('workStartDateWP')?.errors?.['required']">Campo Obligatorio</div>
+                    </div> 
+                    <div class="input-box">
+                        <span class="details">Situación Laboral</span>
+                        <input type="text" maxlength="14" formControlName="employmentSituation">
+                        <div class="error" *ngIf="summited && this.newClient.get('employmentSituation')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>   
+                    <div class="input-box">
+                        <span class="details">País Laboral</span>
+                        <input type="text" maxlength="16" formControlName="countryWP">
+                        <div class="error" *ngIf="summited && this.newClient.get('countryWP')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>    
+                    <div class="input-box">
+                        <span class="details">Departamento Laboral</span>
+                        <input type="text" maxlength="16" formControlName="stateWP">
+                        <div class="error" *ngIf="summited && this.newClient.get('stateWP')?.errors?.['required']">Campo Obligatorio</div>
+                    </div>  
+                    <div class="input-box">
+                        <span class="details">Ciudad Laboral</span>
+                        <input type="text" maxlength="16" formControlName="cityWP">
+                        <div class="error" *ngIf="summited && this.newClient.get('cityWP')?.errors?.['required']">Campo Obligatorio</div>
+                    </div> 
+                    <div class="input-box">
+                        <span class="details">Dirección Laboral</span>
+                        <input type="text" maxlength="50" formControlName="addressNameWP">
+                        <div class="error" *ngIf="summited && this.newClient.get('addressNameWP')?.errors?.['required']">Campo Obligatorio</div>
+                    </div> 
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN DE CONTACTO</h2>
+                    </div>
+                    <div class="contact-details">
+                        <div class="input-box">
+                            <span class="details">Teléfono Móvil</span>
+                            <input type="text" maxlength="10" formControlName="contact">
+                            <div class="error" *ngIf="summited && this.newClient.get('contact')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>   
+                        <div class="input-box">
+                            <span class="details">Correo</span>
+                            <input type="email" maxlength="80" formControlName="contact2">
+                            <div class="error" *ngIf="summited && this.newClient.get('contact2')?.errors?.['required']">Campo Obligatorio</div>
+                        </div>   
+                        <div class="input-box">
+                            <span class="details">Teléfono Fijo</span>
+                            <input type="text" maxlength="7" formControlName="contact3">
+                            <div class="error" *ngIf="summited && this.newClient.get('contact3')?.errors?.['required']">Campo Obligatorio</div>
+                        </div> 
+                    </div>   
+                </div>
+                <div class="button-create">
+                    <input type="submit" value="Guardar">
+                    <input class="btnCF" (click)="openFatca()" value="Crear Fatca">
+                </div>
+            </form>
+        </body>
+        <div *ngIf="switchFatca == true">
+            <app-create-fatca [IDFatca]="idCustomer"></app-create-fatca>
+        </div>
+    </div>
+</div>

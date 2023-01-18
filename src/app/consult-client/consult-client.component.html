@@ -1,0 +1,371 @@
+<div id="global" class="modal">
+    <div class="container-modal">
+        <body class="body-consult">
+            <form [formGroup]="fgCustomer">
+                <div class="button-close">
+                    <!-- <input type="image" (click)="closeConsult()" src="https://cdn-icons-png.flaticon.com/512/458/458595.png"> -->
+                    <button type="button" (click)="closeConsult()"><img src="https://cdn-icons-png.flaticon.com/512/9134/9134450.png"> </button>
+                </div>
+                <div class="user-details">
+                    <div class="subtitle">
+                        <h2>DATOS BÁSICOS</h2>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tipo Cliente: </span>
+                        <input type="text" maxlength="16" formControlName="customerType">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Identificación Interna: </span>
+                        <input type="text" maxlength="16" formControlName="clientId">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tipo Identificación: </span>
+                        <input type="text" maxlength="16" formControlName="documentTypeDT">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Número Identificación: </span>
+                        <input type="text"  maxlength="15" formControlName="documentNumberDT">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nombres: </span>
+                        <input type="text" maxlength="20" formControlName="firstName">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Primer Apellido: </span>
+                        <input type="text" maxlength="20" formControlName="lastName">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Segundo Apellido: </span>
+                        <input type="text" maxlength="20" formControlName="surnames">
+                    </div>
+                    <div class="gender-details">
+                        <span class="gender-title">Género: </span>
+                            <div class="category">
+                                <label for="Id_genderF">F</label>
+                                <input id="Id_genderF" type="radio" maxlength="1" value="F" formControlName="gender">
+                                <label for="Id_genderM">M</label>
+                                <input id="Id_genderM" type="radio" maxlength="1" value="M" formControlName="gender">
+                            </div>
+                    </div>  
+                    <div class="input-box">
+                        <span class="details">Fecha Nacimiento: </span>
+                        <input type="text" maxlength="10" formControlName="birthDate">
+                    </div>   
+                    <div class="input-box">
+                        <span class="details">Ciudad Expedición: </span>
+                        <input type="text" maxlength="4" formControlName="cityBir">
+                    </div>                                                      
+                    <div class="input-box">
+                        <span class="details">Nacionalidad: </span>
+                        <input type="text" maxlength="4" formControlName="nationalities">
+                    </div>  
+                    <div class="input-box">
+                        <span class="details">Personas a Cargo: </span>
+                        <input type="number" maxlength="2" formControlName="personsInCharge">
+                    </div>    
+                    <div class="input-box">
+                        <span class="details">Profesión: </span>
+                        <input type="text" maxlength="2" formControlName="profession">
+                    </div> 
+                    <div class="input-box">
+                        <span class="details">Nivel Educativo: </span>
+                        <input type="text" maxlength="2" formControlName="education">
+                    </div>   
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN DEL BANCO</h2>
+                    </div>                           
+                    <div class="input-box">
+                        <span class="details">Sucursal: </span>
+                        <input type="text" maxlength="4" formControlName="branch">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Membresía: </span>
+                        <input type="text" maxlength="10" formControlName="membershipDate">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tarjeta: </span>
+                        <input type="text" maxlength="26" formControlName="cardname">
+                    </div> 
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN DE RESIDENCIA</h2>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">País Residencia: </span>
+                        <input type="text" maxlength="3" formControlName="countryD">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Departamento Residencia: </span>
+                        <input type="text" maxlength="4" formControlName="stateD">
+                    </div>  
+                    <div class="input-box">
+                        <span class="details">Ciudad Residencia: </span>
+                        <input type="text" maxlength="20" formControlName="cityD">
+                    </div> 
+                    <div class="input-box-economic">
+                        <span class="details">Dirección Residencia: </span>
+                        <input type="text" maxlength="50" formControlName="addressNameD">
+                    </div>  
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN DE CONTACTO</h2>
+                    </div>
+                    <div class="contact-details">
+                        <div class="input-box">
+                            <span>Tipo</span>
+                            <input type="text" *ngFor="let TypeC of ArrTypeContac; let i = index" id="contactType{{i+1}}" [ngModel]="TypeC" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                            <!-- <input type="text" *ngFor="let TypeC of ArrTypeContac; let i = index" formControlName="contactType{{i+1}}" [ngModel]="TypeC" [disabled]="true">
+                            <input type="text" maxlength="15" formControlName="contactType2">
+                            <input type="text" maxlength="15" formControlName="contactType3"> -->
+                        </div>
+                        <div class="input-box">
+                            <span>Número</span>
+                            <input type="text" *ngFor="let NumC of ArrContac" [ngModel]="NumC" [ngModelOptions]="{standalone: true}" [disabled]="true">
+<!--                             <input type="text" maxlength="80" formControlName="contact">
+                            <input type="text" maxlength="80" formControlName="contact2">
+                            <input type="text" maxlength="80" formControlName="contact3"> -->
+                        </div>
+                        <div class="input-box-contactCheck">
+                            <span class="details">Preferencial: </span>
+                            <input type="checkbox" *ngFor="let PrefC of ArrPrefeContac; let i = index" id="LCpreferencial{{i+1}}" [ngModel]="PrefC" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                        </div>
+                        <div class="input-box-contactCheck">
+                            <span class="details">Verificado: </span>
+                            <input type="checkbox" *ngFor="let VerC of ArrCheckContac; let i = index" id="LCisChecked{{i+1}}" [ngModel]="VerC" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                        </div>
+                    </div>  
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN DEL SOCIO</h2>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tipo Identificación: </span>
+                        <input type="text" maxlength="20" formControlName="documentTypePI">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Identificación: </span>
+                        <input type="text" maxlength="15" formControlName="documentNumberPI">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Nombre: </span>
+                        <input type="text" maxlength="20" formControlName="namePI">
+                    </div>                  
+                </div>
+<!--                 <div class="button">
+                    <input type="submit" value="Actualizar" (click)="UpdateClient()">
+                </div> -->
+            </form>
+            <form [formGroup]="fgConsultFatca">
+                <div class="user-details">
+                    <div class="subtitle">
+                        <h2>CONSULTA FATCA</h2>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Id Fatca: </span>
+                        <input type="text" maxlength="16" formControlName="idFatca">
+                    </div>
+                    <div class="gender-details">
+                        <span class="gender-title">Obligaciones Fiscales: </span>
+                        <!-- <fieldset> -->
+                        <div class="category">
+                            <label for="Id_oblifisS">Si</label>
+                            <input id="Id_oblifisS" type="radio" maxlength="1" value="S" formControlName="oblifis">
+                            <label for="Id_oblifisN">No</label>
+                            <input id="Id_oblifisN" type="radio" maxlength="1" value="N" formControlName="oblifis">
+                        </div>
+                        <!-- </fieldset> -->
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Cantidad Obligaciones: </span>
+                        <input type="text" maxlength="20" formControlName="cantobl">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Descripción CRS: </span>
+                        <input type="text" maxlength="20" formControlName="descriptionCRS">
+                    </div>
+                    <div class="subtitle">
+                        <h3>Indicadores</h3>
+                        <p *ngIf="ArrIdIndic.length == 0"> No hay indicadores para mostrar</p>
+                    </div>
+                    <div class="economic-details" *ngIf="ArrIdIndic.length != 0">
+                        <div class="input-box">
+                            <span>Id Indicador</span>
+                            <input type="text" *ngFor="let IndicadorId of ArrIdIndic; let i = index" id="indicatorId{{i+1}}" [ngModel]="IndicadorId" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                            <!-- <input type="text" maxlength="21" formControlName="indicatorIdI">
+                            <input type="text" maxlength="21" formControlName="indicatorIdI2">
+                            <input type="text" maxlength="21" formControlName="indicatorIdI3">
+                            <input type="text" maxlength="21" formControlName="indicatorIdI4"> -->
+                        </div>
+                        <div class="input-box">
+                            <span>Nombre</span>
+                            <input type="text" *ngFor="let IndicadorName of ArrNamIndic; let i = index" id="name{{i+1}}" [ngModel]="IndicadorName" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                            <!-- <input type="text" maxlength="3" formControlName="nameI">
+                            <input type="text" maxlength="3" formControlName="nameI2">
+                            <input type="text" maxlength="3" formControlName="nameI3">
+                            <input type="text" maxlength="3" formControlName="nameI4"> -->
+                        </div>
+                        <div class="input-box">
+                            <span>Valor</span>
+                            <input type="text" *ngFor="let IndicadorValue of ArrValIndic; let i = index" id="value{{i+1}}" [ngModel]="IndicadorValue" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                            <!-- <input type="text" maxlength="3" formControlName="valueI">
+                            <input type="text" maxlength="3" formControlName="valueI2">
+                            <input type="text" maxlength="3" formControlName="valueI3">
+                            <input type="text" maxlength="3" formControlName="valueI4"> -->
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        <h3>Obligaciones</h3>
+                        <p *ngIf="ArrIdObli.length == 0"> No hay obligaciones para mostrar</p>
+                    </div>
+                    <div class="obligation-details" *ngIf="ArrIdObli.length != 0">
+                        <div class="input-box">
+                            <span>Código Obligación</span>
+                            <input type="text" *ngFor="let ObligacionCode of ArrCodObli; let i = index" id="countryCode{{i+1}}" [ngModel]="ObligacionCode" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                            <!-- <input type="text" maxlength="21" formControlName="countryCode1">
+                            <input type="text" maxlength="21" formControlName="countryCode2">
+                            <input type="text" maxlength="21" formControlName="countryCode3">
+                            <input type="text" maxlength="21" formControlName="countryCode4"> -->
+                        </div>
+                        <div class="input-box">
+                            <span>Id Obligación</span>
+                            <input type="text" *ngFor="let ObligacionId of ArrIdObli; let i = index" id="idObligation{{i+1}}" [ngModel]="ObligacionId" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                            <!-- <input type="text" maxlength="3" formControlName="idObligation1">
+                            <input type="text" maxlength="3" formControlName="idObligation2">
+                            <input type="text" maxlength="3" formControlName="idObligation3">
+                            <input type="text" maxlength="3" formControlName="idObligation4"> -->
+                        </div>
+                    </div>
+<!--                     <div class="data-date">
+                        <div class="input-box">
+                            <span class="details">Fecha Creación: </span>
+                            <input type="text" formControlName="dateValueC">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Fecha Modificación: </span>
+                            <input type="text" formControlName="dateValueM">
+                        </div>
+                    </div> -->
+                </div>
+            </form>
+            <form [formGroup]="fgConsultEconomic">
+                <div class="user-details">
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN ECONÓMICA</h2>
+                    </div>
+                    <div class="input-box-economic">
+                        <span class="details">Actividad Económica: </span>
+                        <input type="text" maxlength="40" formControlName="economicActivity">
+                    </div>
+                    <div class="input-box-economic">
+                        <span class="details">Tipo Ocupación: </span>
+                        <input type="text" maxlength="79" formControlName="occupationType">
+                    </div>
+                    <div class="economic-details">
+                        <div class="input-box">
+                            <span>Tipo Ingreso</span>
+                            <input type="text" *ngFor="let IncomesId of ArrIdIncomes; let i = index" id="incomesType{{i+1}}" [ngModel]="IncomesId" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                        </div>
+                        <div class="input-box">
+                            <span>Moneda</span>
+                            <input type="text" *ngFor="let IncomCurrency of ArrCurrIncomes; let i = index" id="currency{{i+1}}" [ngModel]="IncomCurrency" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                        </div>
+                        <div class="input-box">
+                            <span>Monto</span>
+                            <input type="text" *ngFor="let IncomAmount of ArrAmouIncomes; let i = index" id="amount{{i+1}}" [ngModel]="IncomAmount" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                        </div>
+                    </div>
+                    <div class="subtitle">
+                        <h3>Información Laboral</h3>
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Puesto/Cargo: </span>
+                      <input type="text" maxlength="18" formControlName="profesionPosition">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Fecha Inicio </span>
+                      <input type="text" maxlength="10" formControlName="workStartDate">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Situación Laboral: </span>
+                      <input type="text" maxlength="17" formControlName="employmentSituation">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Actividad: </span>
+                      <input type="text" formControlName="activity">
+                    </div>
+                </div>
+            </form>
+            <form [formGroup]="fgConsultAddress">
+                <div class="user-details">
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN DIRECCIONES</h2>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tipo Propiedad: </span>
+                        <input type="text" *ngFor="let LDaddressType of ArrListDtd; let i = index ;" id="LDaddressType{{i+1}}" [ngModel]="LDaddressType" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">País: </span>
+                        <input type="text" *ngFor="let LDcountry of ArrListDcn; let i = index ;" id="LDcountry{{i+1}}" [ngModel]="LDcountry" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Departamento: </span>
+                      <input type="text" *ngFor="let LDstate of ArrListDsn; let i = index ;" id="LDstate{{i+1}}" [ngModel]="LDstate" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Ciudad: </span>
+                      <input type="text" *ngFor="let LDcity of ArrListDlc; let i = index ;" id="LDcity{{i+1}}" [ngModel]="LDcity" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Dirección: </span>
+                      <input type="text" *ngFor="let LDaddressName of ArrListDla; let i = index ;" id="LDaddressName{{i+1}}" [ngModel]="LDaddressName" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Código Postal: </span>
+                      <input type="text" *ngFor="let LDzipCode of ArrListDlz; let i = index ;" id="LDzipCode{{i+1}}" [ngModel]="LDzipCode" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Estrato </span>
+                      <input type="text" *ngFor="let LDstratum of ArrListDls; let i = index ;" id="LDstratum{{i+1}}" [ngModel]="LDstratum" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box">
+                      <span class="details">Antiguedad: </span>
+                      <input type="text" *ngFor="let LDantiquity of ArrListDa; let i = index ;" id="LDantiquity{{i+1}}" [ngModel]="LDantiquity" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box" *ngIf="infoAdicional != ''">
+                      <span class="details">Información Adicional</span>
+                      <input type="text" *ngFor="let LDadditionalInformation of ArrListDai; let i = index ;" id="LDadditionalInformation{{i+1}}" [ngModel]="LDadditionalInformation" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                </div>
+            </form>
+            <form [formGroup]="fgConsultContact">
+                <div class="user-details">
+                    <div class="subtitle">
+                        <h2>INFORMACIÓN CONTACTOS</h2>
+                    </div>
+                    <div class="input-box-contact">
+                        <span class="details">Contacto: </span>
+                        <input type="text" *ngFor="let LCcontact of ArrLContact; let i = index" id="LCcontact{{i+1}}" [ngModel]="LCcontact" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box-contact">
+                        <span class="details">Tipo Contacto: </span>
+                        <input type="text" *ngFor="let LCtypecontact of ArrLContactType; let i = index" id="LCcontactType{{i+1}}" [ngModel]="LCtypecontact" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box-contact">
+                      <span class="details">País: </span>
+                      <input type="text" *ngFor="let LCcountry of ArrLCountry; let i = index" id="LCcountry{{i+1}}" [ngModel]="LCcountry" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box-contactCheck">
+                        <span class="details">Preferencial: </span>
+                        <input type="checkbox" *ngFor="let LCpreferencial of ArrLisPreferential; let i = index" id="LCpreferencial{{i+1}}" [ngModel]="LCpreferencial" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                    <div class="input-box-contactCheck">
+                        <span class="details">Verificado: </span>
+                        <input type="checkbox" *ngFor="let LCchecked of ArrLisChecked; let i = index" id="LCisChecked{{i+1}}" [ngModel]="LCchecked" [ngModelOptions]="{standalone: true}" [disabled]="true">
+                    </div>
+                </div>
+            </form>
+            <!-- <app-consult-fatca></app-consult-fatca> --> 
+            <!-- <app-list-economic></app-list-economic> -->
+            <!-- <app-list-address></app-list-address> -->
+            <!-- <app-list-contact></app-list-contact> -->
+        </body>   
+    </div>
+</div>

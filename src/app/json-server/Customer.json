@@ -1,0 +1,1002 @@
+{
+  "ConsultClient": {
+    "data": {
+      "customerId": "17068119",
+      "clientId": "00296188",
+      "firstName": "ADOLFO",
+      "lastName": "RUIZ",
+      "birthDate": "2001-02-04T00:00:00.0-0500",
+      "nationalities": [
+        {
+          "id": "COL",
+          "name": "COLOMBIA"
+        }
+      ],
+      "identityDocuments": [
+        {
+          "documentType": {
+            "id": "CC",
+            "name": "CEDULA DE CIUDADANIA"
+          },
+          "documentNumber": "000000017068119",
+          "city": "JUAN DE ACOSTA",
+          "checkDigit": "0"
+        }
+      ],
+      "legalAddress": {
+        "addressName": "AVR 120 # 43-00 AVENIDA CLL 68 A, JUAN DE ACOSTA",
+        "city": " JUAN DE ACOSTA",
+        "state": " JUAN DE ACOSTA",
+        "country": {
+          "id": "COL",
+          "name": "COLOMBIA"
+        }
+      },
+      "contactDetails": [
+        {
+          "contactDetailId": "01",
+          "contact": "0000000000",
+          "contactType": {
+            "id": "PHONE_NUMBER",
+            "name": "PHONE"
+          },
+          "isPreferential": false,
+          "isChecked": true
+        },
+        {
+          "contactDetailId": "02",
+          "contact": "0000000000",
+          "contactType": {
+            "id": "PHONE_NUMBER",
+            "name": "MOVIL"
+          },
+          "isPreferential": true,
+          "isChecked": true
+        },
+        {
+          "contactDetailId": "03",
+          "contact": "0000000000",
+          "contactType": {
+            "id": "PHONE_NUMBER",
+            "name": "MOVIL"
+          },
+          "isPreferential": true,
+          "isChecked": true
+        }
+      ],
+      "membershipDate": "1997-09-12",
+      "gender": {
+        "id": "M"
+      },
+      "bank": {
+        "branch": {
+          "id": "0693",
+          "name": "PARQUE NACIONAL"
+        }
+      },
+      "manager": {
+        "managerId": "0913"
+      },
+      "customerType": {
+        "name": "NATURAL RESIDENTE"
+      },
+      "education": {
+        "level": "SECUNDARIA"
+      },
+      "profession": "SIN PROFESION ACADEMICA",
+      "cardName": "MES DE LA NAVIDAD",
+      "partnerInformation": {
+        "name": "EVA BRAUN",
+        "partnerIdentityDocuments": [
+          {
+            "documentType": {
+              "id": "1",
+              "name": "EVA BRAUN"
+            },
+            "documentNumber": "000000052930964",
+            "checkDigit": "0"
+          }
+        ]
+      },
+      "tecom": "NATURAL RESIDENTE",
+      "personsInCharge": 0,
+      "assignedManager": {}
+    }
+  },
+  "CreateClient": {
+    "firstName": "ANDRES",
+    "lastName": "FELIPE",
+    "surnames": "",
+    "gender": {
+      "id": "M"
+    },
+    "bank": {
+      "branch": {
+        "id": "1111"
+      },
+      "id": "0012"
+    },
+    "birthData": {
+      "country": {
+        "id": "COL"
+      },
+      "birthDate": "1988-09-03",
+      "state": {
+        "id": "11"
+      },
+      "city": "001"
+    },
+    "nationalities": [
+      {
+        "id": "COL"
+      }
+    ],
+    "identityDocuments": [
+      {
+        "documentType": {
+          "id": "1"
+        },
+        "country": {
+          "id": "COL"
+        },
+        "city": "001",
+        "state": {
+          "id": "17"
+        },
+        "expirationDate": "2015-02-21",
+        "documentNumber": "1023110939"
+      }
+    ],
+    "maritalStatus": {
+      "id": "1"
+    },
+    "contactDetails": [
+      {
+        "contact": "3101881086",
+        "contactType": {
+          "id": "MOBILE_NUMBER"
+        }
+      },
+      {
+        "contact": "andres.prueba@gmail.com",
+        "contactType": {
+          "id": "EMAIL"
+        }
+      },
+      {
+        "contact": "2222222",
+        "contactType": {
+          "id": "OFFICE_NUMBER"
+        }
+      }
+    ],
+    "economicData": {
+      "economicActivity": {
+        "id": "00000000010"
+      },
+      "occupationType": {
+        "id": "306"
+      },
+      "employmentSituation": "5",
+      "incomes": [
+        {
+          "incomesType": {
+            "id": "AR"
+          },
+          "incomesValue": {
+            "currency": "COP",
+            "amount": "9999000"
+          }
+        }
+      ],
+      "workPlace": {
+        "name": "BBVA Colombia",
+        "taxpayerIdentification": {
+          "documentType": {
+            "id": "CC"
+          },
+          "documentNumber": "860006020-9"
+        },
+        "workStartDate": "2016-10-21",
+        "address": {
+          "location": {
+            "addressName": "CLL,187,A,0,N,55,B,0,S,21,Oficina 101 UGI",
+            "country": {
+              "id": "COL"
+            },
+            "state": {
+              "id": "63"
+            },
+            "city": "63130"
+          }
+        }
+      }
+    },
+    "addresses": [
+      {
+        "location": {
+          "addressName": "CLL,197,A,0,N,11,B,0,S,55,Apto Colina Torre 5",
+          "city": "001",
+          "state": {
+            "id": "17"
+          },
+          "country": {
+            "id": "COL"
+          }
+        }
+      }
+    ],
+    "personsInCharge": 1
+  },
+  "ConsultFatca": {
+    "idFatca": "03765541",
+    "indicators": [
+      {
+        "indicatorId": "Explicacion",
+        "name": "Explicacion"
+      },
+      {
+        "indicatorId": "Forma 407",
+        "name": "Forma 407"
+      },
+      {
+        "indicatorId": "Forma",
+        "name": "Forma"
+      },
+      {
+        "indicatorId": "Estatus FATCA",
+        "name": "Estatus FATCA",
+        "value": "1"
+      },
+      {
+        "indicatorId": "Estatus CRS",
+        "name": "Estatus CRS",
+        "value": "R"
+      },
+      {
+        "indicatorId": "US Perso",
+        "name": "US Perso",
+        "value": "N"
+      }
+    ],
+    "obligation": [
+      {
+        "countryCode": "PAR",
+        "idObligation": "CHI123"
+      },
+      {
+        "countryCode": "PER",
+        "idObligation": "PAR239"
+      },
+      {
+        "countryCode": "FRA",
+        "idObligation": "FRA123"
+      },
+      {
+        "countryCode": "ARG",
+        "idObligation": "ARG123"
+      }
+    ],
+    "oblifis": "S",
+    "cantobl": 4,
+    "descriptionFatca": "NO US PERSON",
+    "descriptionCRS": "REPORTABLE",
+    "dateFatca": [
+      {
+        "dateId": "Fecha de creacion",
+        "dateName": "Fecha de creacion",
+        "dateValue": "2017-12-04T08:25:00.000-0600"
+      },
+      {
+        "dateId": "Fecha de modificacion",
+        "dateName": "Fecha de modificacion",
+        "dateValue": "2017-12-04T08:25:00.000-0600"
+      }
+    ]
+  },
+  "CreateFatca": {
+    "idFatca": "03765541",
+    "indicators": [
+      {
+        "indicatorId": "Forma 407",
+        "name": "Explicacion",
+        "value": "S"
+      },
+      {
+        "indicatorId": "Forma",
+        "name": "Forma 407",
+        "value": "S"
+      },
+      {
+        "indicatorId": "Estatus FATCA",
+        "name": "Forma",
+        "value": "S"
+      },
+      {
+        "indicatorId": "Estatus FATCA",
+        "name": "Estatus FATCA",
+        "value": "1"
+      }
+    ],
+    "obligation": [
+      {
+        "countryCode": "PAR",
+        "idObligation": "CHI123"
+      },
+      {
+        "countryCode": "PER",
+        "idObligation": "PAR239"
+      },
+      {
+        "countryCode": "FRA",
+        "idObligation": "FRA123"
+      },
+      {
+        "countryCode": "ARG",
+        "idObligation": "ARG123"
+      }
+    ],
+    "oblifis": "S",
+    "cantobl": "4",
+    "descriptionCRS": "REPORTABLE",
+    "dateFatca": [
+      {
+        "dateId": "Fecha de creacion",
+        "dateName": "Fecha de creacion",
+        "dateValue": "2017-12-04T08:25:00.000-0600"
+      },
+      {
+        "dateId": "Fecha de modificacion",
+        "dateName": "Fecha de modificacion",
+        "dateValue": "2017-12-04T08:25:00.000-0600"
+      }
+    ],
+    "estadoFatca": "00"
+  },
+  "ListAddress": [
+    {
+      "addressId": "01001",
+      "addressType": {
+        "id": "0",
+        "name": "RESIDENCIA"
+      },
+      "ownershipType": {
+        "id": "L",
+        "name": "PROPIA SIN HIP."
+      },
+      "location": {
+        "addressName": "CRA 6 # 54 21 - PISO 3 -",
+        "city": "11",
+        "state": {
+          "id": "11",
+          "name": "DISTRITO CAPITAL"
+        },
+        "country": {
+          "id": "COL",
+          "name": "COLOMBIA"
+        },
+        "zipCode": "0000000",
+        "geoLocation": {
+          "latitude": 0,
+          "longitude": 0
+        },
+        "stratum": "01"
+      },
+      "antiquity": "2016-08-05"
+    },
+    {
+      "addressId": "02001",
+      "addressType": {
+        "id": "1",
+        "name": "OFICINA"
+      },
+      "ownershipType": {
+        "id": "X",
+        "name": "OTROS"
+      },
+      "location": {
+        "addressName": "CRA 5 # 5-05",
+        "city": "ARAUCA",
+        "state": {
+          "id": "81",
+          "name": "ARAUCA"
+        },
+        "country": {
+          "id": "COL",
+          "name": "COLOMBIA"
+        },
+        "zipCode": "0000000",
+        "geoLocation": {
+          "latitude": 0,
+          "longitude": 0
+        },
+        "additionalInformation": "CALLE 91 NO. 7 - 52",
+        "stratum": "00"
+      },
+      "antiquity": "0001-01-01"
+    },
+    {
+      "addressId": "03001",
+      "addressType": {
+        "id": "8",
+        "name": "CORRESPONDENCIA"
+      },
+      "ownershipType": {
+        "id": "X",
+        "name": "OTROS"
+      },
+      "location": {
+        "addressName": "CRA 4 # 4-04",
+        "city": "BOGOTA",
+        "state": {
+          "id": "11",
+          "name": "DISTRITO CAPITAL"
+        },
+        "country": {
+          "id": "COL",
+          "name": "COLOMBIA"
+        },
+        "zipCode": "0000000",
+        "geoLocation": {
+          "latitude": 0,
+          "longitude": 0
+        },
+        "additionalInformation": "AV. DORADO NO. 50 -35",
+        "stratum": "00"
+      },
+      "antiquity": "0001-01-01"
+    }
+  ],
+  "ListContact": [
+    {
+      "contactDetailId": "1",
+      "contact": "00000000000000",
+      "contactType": {
+        "id": "PHONE",
+        "name": "N"
+      },
+      "country": {
+        "id": "COL",
+        "name": "COLOMBIA"
+      },
+      "isPreferential": false,
+      "isChecked": true
+    },
+    {
+      "contactDetailId": "2",
+      "contact": "00000912222222",
+      "contactType": {
+        "id": "PHONE",
+        "name": "4"
+      },
+      "country": {
+        "id": "COL",
+        "name": "COLOMBIA"
+      },
+      "isPreferential": false,
+      "isChecked": true
+    },
+    {
+      "contactDetailId": "3",
+      "contact": "00003101881086",
+      "contactType": {
+        "id": "PHONE",
+        "name": "6"
+      },
+      "country": {
+        "id": "COL",
+        "name": "COLOMBIA"
+      },
+      "isPreferential": true,
+      "isChecked": true
+    },
+    {
+      "contactDetailId": "4",
+      "contact": "ANDRES.PRUEBA@GMAIL.COM",
+      "contactType": {
+        "id": "EMAIL",
+        "name": "ALERTS"
+      },
+      "country": {
+        "id": "COL",
+        "name": "COLOMBIA"
+      },
+      "isPreferential": false,
+      "isChecked": true
+    },
+    {
+      "contactDetailId": "5",
+      "contact": "ANDRES.PRUEBA@GMAIL.COM",
+      "contactType": {
+        "id": "EMAIL",
+        "name": "COMMERCIAL"
+      },
+      "country": {
+        "id": "COL",
+        "name": "COLOMBIA"
+      },
+      "isPreferential": false,
+      "isChecked": true
+    }
+  ],
+  "ListEconomic": {
+    "economicDataId": "10000010101789240",
+    "economicActivity": {
+      "id": "00000000111",
+      "name": "CULTIVO DE CEREALES (EXCEPTO ARROZ), LEGUMBRES Y SEMILLAS OLEAGINO"
+    },
+    "occupationType": {
+      "id": "ACEC",
+      "name": "AE00000000111CULTIVO DE CEREALES (EXCEPTO ARROZ), LEGUMBRES Y SEMILLAS OLEAGINO"
+    },
+    "incomes": [
+      {
+        "incomesType": {
+          "id": "IF"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "1800000.00"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "IV"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0.00"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "OI"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0.00"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "TI"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "1800000.00"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "DN"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0.00"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "HA"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0.00"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "GA"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0.00"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "CR"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0.00"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "OE"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0.00"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "TE"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0.00"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "VV"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0.00"
+        }
+      }
+    ],
+    "workPlace": {
+      "workStartDate": "2013-08-01",
+      "activity": "ACTIVITY",
+      "profesionPosition": {
+        "id": "ADM",
+        "name": "ADMINISTRATIVO"
+      }
+    },
+    "employmentSituation": "SL1FIJO"
+  },
+  "ModAddress": {
+    "isPreferential": true,
+    "addressType": {
+      "id": "LEGAL"
+    },
+    "ownershipType": {
+      "id": "OWNER"
+    },
+    "location": {
+      "addressName": "Avenida República de Ecuador 1234 Piso 2 Interior 205 Urbanización Corpac",
+      "city": "Lima",
+      "state": {
+        "id": "LI"
+      },
+      "country": {
+        "id": "PE"
+      },
+      "zipCode": "34566",
+      "geolocation": {
+        "latitude": 40.814505,
+        "longitude": -74.07272910000002
+      },
+      "additionalInformation": "COSTADO COLEGIO SAN AGUSTIN",
+      "geographicGroups": [
+        {
+          "geographicGroupType": {
+            "id": "UBIGEO"
+          },
+          "code": "0101004"
+        },
+        {
+          "geographicGroupType": {
+            "id": "URBANIZATION"
+          },
+          "name": "Corpac"
+        },
+        {
+          "geographicGroupType": {
+            "id": "AVENUE"
+          },
+          "name": "República de Ecuador"
+        },
+        {
+          "geographicGroupType": {
+            "id": "EXTERIOR_NUMBER"
+          },
+          "name": "1234"
+        },
+        {
+          "geographicGroupType": {
+            "id": "FLOOR"
+          },
+          "name": "2"
+        },
+        {
+          "geographicGroupType": {
+            "id": "INTERIOR_NUMBER"
+          },
+          "name": "205"
+        },
+        {
+          "geographicGroupType": {
+            "id": "DOOR"
+          },
+          "name": "B"
+        }
+      ],
+      "meta": {
+        "stratum": "Low"
+      }
+    }
+  },
+  "ModEconomic": {
+    "economicActivity": {
+      "id": "00000000010"
+    },
+    "incomes": [
+      {
+        "incomesType": {
+          "id": "IV"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "OI"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "AR"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "GM"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "SB"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "VD"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "39000000",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "VC"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "BA"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "OB"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "CC"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "GH"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "IM"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "20000000",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "GC"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "28000",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "DN"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "2000000",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "incomesType": {
+          "id": "GT"
+        },
+        "incomesValue": {
+          "currency": "COP",
+          "amount": "12266000",
+          "concept": "NORMAL"
+        }
+      }
+    ],
+    "reservedInformation": [
+      {
+        "reservedType": {
+          "id": "I01"
+        },
+        "reservedValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "reservedType": {
+          "id": "I04"
+        },
+        "reservedValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "reservedType": {
+          "id": "D05"
+        },
+        "reservedValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "reservedType": {
+          "id": "D06"
+        },
+        "reservedValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      },
+      {
+        "reservedType": {
+          "id": "D07"
+        },
+        "reservedValue": {
+          "currency": "COP",
+          "amount": "0",
+          "concept": "NORMAL"
+        }
+      }
+    ],
+    "workPlace": {
+      "workStartDate": "2022-03-02",
+      "profesionPosition": {
+        "id": "MIL"
+      }
+    },
+    "employmentSituation": "1"
+  },
+  "ModFatca": {
+    "idFatca": "07112281",
+    "indicators": [
+      {
+        "indicatorId": "Explicacion",
+        "name": "Explicacion",
+        "value": ""
+      },
+      {
+        "indicatorId": "Forma 407",
+        "name": "Forma 407",
+        "value": ""
+      },
+      {
+        "indicatorId": "Forma",
+        "name": "Forma",
+        "value": "S"
+      },
+      {
+        "indicatorId": "Estatus FATCA",
+        "name": "Estatus FATCA",
+        "value": "1"
+      },
+      {
+        "indicatorId": "Estatus CRS",
+        "name": "Estatus CRS",
+        "value": "N"
+      },
+      {
+        "indicatorId": "US Perso",
+        "name": "US Perso",
+        "value": "N"
+      }
+    ],
+    "obligation": [
+      {
+        "countryCode": "PAR",
+        "idObligation": "PAR239"
+      },
+      {
+        "countryCode": "CHI",
+        "idObligation": "CHI123"
+      },
+      {
+        "countryCode": "FRA",
+        "idObligation": "FRA123"
+      }
+    ],
+    "oblifis": "S",
+    "cantobl": 3,
+    "descriptionFatca": "REPORTABLE",
+    "descriptionCRS": "NO US PERSON",
+    "dateFatca": [
+      {
+        "dateId": "Fecha de creacion",
+        "dateName": "Fecha de creacion",
+        "dateValue": "2017-12-04T08:25:00.000-0600"
+      },
+      {
+        "dateId": "Fecha de modificacion",
+        "dateName": "Fecha de modificacion",
+        "dateValue": "2017-12-04T08:25:00.000-0600"
+      }
+    ],
+    "estadoFatca": "R",
+    "estadoCRS": "1",
+    "origen": "AC",
+    "centro": "0073",
+    "termina": "J370",
+    "usuario": "C342046"
+  }
+}

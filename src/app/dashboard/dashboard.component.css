@@ -1,0 +1,198 @@
+:host {
+    /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+    font-family:BentonSansBBVA-Medium,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1a487f;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar-title{
+    font-family:BentonSansBBVA-Medium,Helvetica,Arial,sans-serif;
+    margin-left: 2%;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+  /* Responsive Styles */
+  @media screen and (max-width: 767px) {
+    .card-container > *:not(.circle-link) ,
+    .terminal {
+      width: 100%;
+    }
+
+    .card:not(.highlight-card) {
+      height: 16px;
+      margin: 8px 0;
+    }
+
+    .card.highlight-card span {
+      margin-left: 72px;
+    }
+
+    svg#rocket-smoke {
+      right: 120px;
+      transform: rotate(-5deg);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    svg#rocket-smoke {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  /**********************/
+  .container-dashboard {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-dashboard form .dash-details{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    margin: 20px 0 12px 0;
+  }
+
+  .container-dashboard form .dash-details .subtitle{
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+    background: #001d41;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .container-dashboard form .dash-details .subtitle h2{
+    font-size: 18px;
+  }
+
+  .container-dashboard form .dash-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 3 - 10px);
+  }
+
+  .container-dashboard form .dash-details .input-box details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .container-dashboard form .dash-details .input-box input{
+    height: 30px;
+    width: 90%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+  }
+
+  .con-btns-dash{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  .container-dashboard .btn-primary{
+    height: 40px;
+    margin: 5px 0;
+    width: 30%;
+    outline: none;
+    color: rgb(253, 253, 253);
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#1a487f,rgb(57, 174, 241));
+    font-family:BentonSansBBVA-Medium,Helvetica,Arial,sans-serif;
+  }
+
+  .container-dashboard .btn-verification{
+    height: 35px;
+    margin-top: 15px;
+    width: 20%;
+    outline: none;
+    color: rgb(253, 253, 253);
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,#1a487f,rgb(57, 174, 241));
+    font-family:BentonSansBBVA-Medium,Helvetica,Arial,sans-serif;
+  }
+
+  .btn-lupa{
+    width: 40%;
+    height: 35%;
+    margin-left: 10%;
+  }
+
+
+  .tableFiles {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .tableFiles td, .tableFiles th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  
+  .tableFiles tr:nth-child(even){background-color: #f2f2f2;}
+  
+  /*.tableFiles tr:hover {background-color: #ddd;}*/
+  
+  .tableFiles th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1F497D;
+    color: white;
+  }
