@@ -15,7 +15,6 @@ import { IListContact } from '../Interface/listContactDetails';
 export class ConsultClientComponent implements OnInit {
   @Input() IDClient! : string;
   @Input() IDNumDoc! : string;
-
   fgCustomer: FormGroup;
   fgConsultFatca: FormGroup;
   fgConsultEconomic: FormGroup;
@@ -102,8 +101,7 @@ export class ConsultClientComponent implements OnInit {
       oblifis: new FormControl({ value: '', disabled: true }),
       cantobl: new FormControl({ value: '', disabled: true }),
       descriptionCRS: new FormControl({ value: '', disabled: true })
-/*       dateValueC: new FormControl({ value: '', disabled: true }),
-      dateValueM: new FormControl({ value: '', disabled: true }), */
+
     });
 
     this.fgConsultEconomic = this.fbConsultEconomic.group({
